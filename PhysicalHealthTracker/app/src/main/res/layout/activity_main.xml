@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#EEFF41">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Track your weekly habits "
+        android:textColor="#000000"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"
+        android:id="@+id/title"
+       />
+
+    //Main part
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        //Food part
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/food"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="16dp"
+                android:text="Food"
+                android:textColor="#000000"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/food"
+                android:padding="8dp"/>
+
+            //Food buttons
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="#64DD17"
+                    android:padding="8dp"
+                    android:onClick="addOneToFoodScore"
+                    android:text="+"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/food_text_view"
+                    android:layout_gravity="center_horizontal"
+                    android:text="0"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="#64DD17"
+                    android:onClick="removeOneFromFoodScore"
+                    android:text="-"
+                    android:layout_gravity="center_horizontal"/>
+                <Button
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/info"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="FoodInfo"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        //Activity part
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="16dp"
+                android:text="Activity"
+                android:textColor="#000000"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/workout"
+                android:padding="8dp"/>
+
+            //Activity buttons
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="#64DD17"
+                    android:padding="8dp"
+                    android:onClick="addOneToActivityScore"
+                    android:text="+"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/activity_text_view"
+                    android:layout_gravity="center_horizontal"
+                    android:text="0"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="#64DD17"
+                    android:onClick="removeOneFromActivityScore"
+                    android:text="-"
+                    android:layout_gravity="center_horizontal"/>
+                <Button
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/info"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="ActivityInfo"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        //Water part
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="16dp"
+                android:text="Water"
+                android:textColor="#000000"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/water"
+                android:padding="8dp"/>
+
+            //Water buttons
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="#64DD17"
+                    android:padding="8dp"
+                    android:onClick="addOneToWaterScore"
+                    android:text="+"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/water_text_view"
+                    android:layout_gravity="center_horizontal"
+                    android:text="0"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="#64DD17"
+                    android:onClick="removeOneFromWaterScore"
+                    android:text="-"
+                    android:layout_gravity="center_horizontal"/>
+                <Button
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/info"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="WaterInfo"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        //Bad Habits part
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="16dp"
+                android:text="Bad Habits"
+                android:textColor="#000000"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/badhabit"
+                android:padding="8dp"/>
+
+            //Bad habits buttons
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="#64DD17"
+                    android:onClick="addOneToBadHabitsScore"
+                    android:padding="8dp"
+                    android:text="+"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/badhabits_text_view"
+                    android:layout_gravity="center_horizontal"
+                    android:text="0"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="#64DD17"
+                    android:onClick="removeOneFromBadHabitsScore"
+                    android:text="-"
+                    android:layout_gravity="center_horizontal"
+                    />
+                <Button
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/info"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="BadHabitsInfo"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/report_text_veiw"
+        android:layout_margin="16dp"
+        android:layout_above="@id/FinishWeek"
+        android:layout_centerHorizontal="true" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/FinishWeek"
+        android:onClick="FinishWeekReport"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Finish Week"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#76FF03"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/title"
+        android:text="Restart Score"
+        android:onClick="ResetScore"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#76FF03"/>
+
+</RelativeLayout>
